@@ -18,7 +18,7 @@ def ping_servers(servers, influx_client):
         except socket.timeout:
             continue
         except:
-            print(f'Error pinging {server["host"]}:{server["port"]}. Timeout was {server["timeout"]}')
+            print(f'Error pinging {server["host"]}:{server.get("port", 25565)}. Timeout was {server.get("timeout", 1)}')
             traceback.print_exc()
             continue
 

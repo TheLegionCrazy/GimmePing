@@ -76,7 +76,7 @@ def read_packet(connection):
 def ping(**kwargs):
     host = kwargs['host']
     port = kwargs.get('port', 25565)
-    timeout = kwargs.get('timeout', 0.75)
+    timeout = kwargs.get('timeout', 1)
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as connection:
         connection.settimeout(timeout)
