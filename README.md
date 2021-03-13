@@ -25,6 +25,7 @@ Supports mc `1.7+ versions`.
                 "username": 'root',               # Username
                 "password": 'root',               # Password
                 "database": '_internal'           # Database
+                # You can specify more parameters: https://influxdb-python.readthedocs.io/en/latest/api-documentation.html#influxdbclient
             },
             "servers": [                          # Servers for ping
                 {
