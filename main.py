@@ -24,9 +24,7 @@ def ping_servers(servers, influx_client):
 
         points.append({
             "measurement": "servers_stats",
-            "tags": {
-                "server": server['server_name']
-            },
+            "tags": server.get("tags"),
             "time": int(round(time.time() * 1000)),
             "fields": {
                 'online': ping_data['players']['online']

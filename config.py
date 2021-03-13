@@ -26,10 +26,14 @@ def write_default_config(config_file):
         },
         "servers": [
             {
-                'server_name': 'Hypixel',
                 'host': 'mc.hypixel.net',
                 'port': 25565,
                 'timeout': 1,
+                'tags': {
+                    'server_name': 'Hypixel',
+                    'server_type': 'mg',
+                    'server_region': 'US'
+                }
             }
         ],
         "ping_period": 1
