@@ -41,7 +41,7 @@ Temporary Items
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-config.json
+config.yml
 
 # Generated files
 .idea/**/contentModel.xml

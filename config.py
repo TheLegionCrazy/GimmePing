@@ -1,7 +1,7 @@
-import json
+import yaml
 import os
 
-CONFIG_FILE = 'config.json'
+CONFIG_FILE = 'config.yml'
 
 
 def read():
@@ -12,7 +12,7 @@ def read():
             exit(0)
 
     with open(CONFIG_FILE, 'r') as config_file:
-        return json.loads(json.load(config_file))
+        return yaml.load(config_file, yaml.FullLoader)
 
 
 def write_default_config(config_file):
@@ -39,4 +39,4 @@ def write_default_config(config_file):
         "ping_period": 1
     }
 
-    json.dump(json.dumps(config), config_file, indent=4)
+    yaml.dump(config, config_file, indent=2, allow_unicode=True, sort_keys=False)
